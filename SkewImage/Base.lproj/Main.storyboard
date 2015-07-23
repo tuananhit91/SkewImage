@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IDL-gF-G9f">
+                                <rect key="frame" x="54" y="51" width="267" height="368"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="368" id="KsK-Qo-oWK"/>
+                                    <constraint firstAttribute="width" constant="267" id="XZX-Fu-aHv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBs-uh-oXw">
+                                <rect key="frame" x="128" y="561" width="113" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50141559520000001" blue="0.3206243178" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ON/OFF Slider">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ONOFFSlider:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7qa-IX-AD7"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zrf-c0-wwF">
+                                <rect key="frame" x="52" y="473" width="271" height="31"/>
+                                <connections>
+                                    <action selector="actionSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="OVF-9N-JmS"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZBs-uh-oXw" secondAttribute="trailing" constant="118" id="2kE-1X-lVA"/>
+                            <constraint firstAttribute="centerX" secondItem="IDL-gF-G9f" secondAttribute="centerX" id="53L-6r-HWF"/>
+                            <constraint firstItem="Zrf-c0-wwF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="38" id="9Jj-Bf-XbX"/>
+                            <constraint firstItem="IDL-gF-G9f" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="38" id="ISr-TH-rXk"/>
+                            <constraint firstItem="ZBs-uh-oXw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="112" id="JsS-SI-RUP"/>
+                            <constraint firstItem="Zrf-c0-wwF" firstAttribute="top" secondItem="IDL-gF-G9f" secondAttribute="bottom" constant="54" id="LCM-fC-a5q"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZBs-uh-oXw" secondAttribute="bottom" constant="76" id="Zcd-K7-w1p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IDL-gF-G9f" secondAttribute="trailing" constant="38" id="hNW-G2-XkO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zrf-c0-wwF" secondAttribute="trailing" constant="38" id="mhs-5C-NG9"/>
+                            <constraint firstItem="ZBs-uh-oXw" firstAttribute="top" secondItem="IDL-gF-G9f" secondAttribute="bottom" constant="142" id="msI-gs-now"/>
+                            <constraint firstItem="IDL-gF-G9f" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="31" id="yGP-yh-4sD"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="iPhoto" destination="IDL-gF-G9f" id="JdJ-EE-7Mo"/>
+                        <outlet property="slider" destination="Zrf-c0-wwF" id="MDS-AU-qCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="422.5" y="296.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="girl.jpg" width="376" height="512"/>
+    </resources>
 </document>

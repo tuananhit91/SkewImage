@@ -14,6 +14,7 @@
 		8442DCCE1B60E27700F118F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8442DCCD1B60E27700F118F8 /* Images.xcassets */; };
 		8442DCD11B60E27700F118F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8442DCCF1B60E27700F118F8 /* LaunchScreen.xib */; };
 		8442DCDD1B60E27700F118F8 /* SkewImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442DCDC1B60E27700F118F8 /* SkewImageTests.m */; };
+		8442DCE71B60E2A600F118F8 /* girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8442DCE61B60E2A600F118F8 /* girl.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8442DCD61B60E27700F118F8 /* SkewImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkewImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442DCDB1B60E27700F118F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8442DCDC1B60E27700F118F8 /* SkewImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkewImageTests.m; sourceTree = "<group>"; };
+		8442DCE61B60E2A600F118F8 /* girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		8442DCBF1B60E27600F118F8 /* SkewImage */ = {
 			isa = PBXGroup;
 			children = (
+				8442DCE61B60E2A600F118F8 /* girl.jpg */,
 				8442DCC41B60E27600F118F8 /* AppDelegate.h */,
 				8442DCC51B60E27600F118F8 /* AppDelegate.m */,
 				8442DCC71B60E27600F118F8 /* ViewController.h */,
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8442DCCC1B60E27600F118F8 /* Main.storyboard in Resources */,
+				8442DCE71B60E2A600F118F8 /* girl.jpg in Resources */,
 				8442DCD11B60E27700F118F8 /* LaunchScreen.xib in Resources */,
 				8442DCCE1B60E27700F118F8 /* Images.xcassets in Resources */,
 			);
